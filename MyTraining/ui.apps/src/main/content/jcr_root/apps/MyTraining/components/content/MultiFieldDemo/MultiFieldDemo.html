@@ -1,0 +1,7 @@
+<h2> multifield </h2>
+<sly data-sly-use.model="MyTraining.core.models.MultiValueFetch"/>
+<sly data-sly-test="${model.getValue}">
+    <sly data-sly-list.text="${model.getValue}">
+        <li>Title: ${text}, <br> Link: ${model.getValue[text]} </li>
+    </sly>
+</sly>

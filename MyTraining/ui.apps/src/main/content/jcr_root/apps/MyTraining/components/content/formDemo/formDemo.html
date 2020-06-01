@@ -1,0 +1,33 @@
+
+<sly data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}"/>
+<sly data-sly-call="${clientLib.all @ categories='mytraining.base'}"/>
+
+
+
+<!--<h2>FormDemo</h2>-->
+
+
+<!--
+
+${properties.FirstName}
+<br>
+${properties.LastName}
+<br>
+${properties.Email}
+<br>
+${properties.Submit}
+<br>
+${properties.ThankYou}
+-->
+<div id="abc">
+    <form>
+        <label>${properties.FirstName}:</label> <input type="text"  id= "F_name" name="first_name"><br>
+        <label>${properties.LastName}:</label> <input type="text"  id= "L_name"  name="last_name"><br>
+        <label>${properties.Email}:</label> <input type="text" id="email" name="email">
+        <input type="button" value="${properties.Submit}" onclick="xy()"/>
+    </form>
+</div>
+
+<div id="pqr" style="display:none">
+    <h1>${properties.ThankYou}</h1>
+</div>

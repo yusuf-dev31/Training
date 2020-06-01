@@ -1,0 +1,23 @@
+<h2>Assignment for SlingModel  </h2>
+<!--<h4>${properties.pages}  </h4>
+
+<p class="link"> data sly list</p>
+<ul data-sly-list.child="${properties.pages}">
+		<li>${child}</li> 
+</ul>
+<p class="global"> Current Page =>${currentPage.path}</p>
+${resource.path} <br>
+${properties.sling:resourceType}
+
+<p class="global"> Current Login Detail =>${currentSession.userID}</p>  -->
+<!--
+-->
+
+
+
+<sly data-sly-use.model="MyTraining.core.models.DemoModel"/>
+	<!--	<sly data-sly-test="${properties.path}"> -->
+
+			${model.getPage}
+			${model.getPageName}
+

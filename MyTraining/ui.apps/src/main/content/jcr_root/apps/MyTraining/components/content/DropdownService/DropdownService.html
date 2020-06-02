@@ -1,0 +1,22 @@
+<sly data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}"/>
+<sly data-sly-call="${clientLib.all @ categories='mytraining.base'}"/>
+<h1>DropDown-Osgi-Service</h1>
+
+<sly data-sly-use.model="MyTraining.core.models.DropDownModel"/>
+<!--${model.getName}-->
+
+
+<form action="">
+    <label> Movie Genre :</label><br>
+    <select  name="movieGen" id="movie" data-sly-list="${model.getDropDownValue}">
+            <option value="${item}">${item}</option>
+    </select>
+    <br><br>
+    <!--<input type="Submit" value="Submit"/>-->
+    <input type="button" value="Submit" onclick="xyz()"/>
+</form>
+
+<div id="out">
+
+</div>
+

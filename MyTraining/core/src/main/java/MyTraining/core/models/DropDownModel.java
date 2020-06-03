@@ -28,7 +28,7 @@ public class DropDownModel {
         if (dropdownService.getDisplayValue() != null)
 
     {
-      // name = resource.getValueMap().get("movieGen", String.class); 
+      // name = resource.getValueMap().get("movieGen", String.class);
         value = dropdownService.getDisplayValue();
 
     }

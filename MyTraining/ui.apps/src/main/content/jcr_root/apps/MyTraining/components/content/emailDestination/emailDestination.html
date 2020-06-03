@@ -1,0 +1,41 @@
+
+<sly data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}"/>
+<sly data-sly-call="${clientLib.all @ categories='mytraining.base'}"/>
+
+<h2>Email-Destination Component </h2>
+
+<sly data-sly-use.model="MyTraining.core.models.EmailDestinationModel"/>
+
+<!--
+<sly data-sly-test="${!model.getLocation}">
+    <h4>No Such loc Found</h4>
+</sly>
+
+<sly data-sly-test="${model.getLocation}">
+    <h1>locations are : ${model.getLocation}</h1>
+</sly>-->
+
+
+
+    <sly data-sly-test="${!model.getTitle}">
+        <h4>No Such Title Found</h4>
+    </sly>
+
+    <sly data-sly-test="${model.getTitle}">
+        <h1>Title is : ${model.getTitle}</h1>
+    </sly>
+
+    <form action="">
+        <label>Email :</label>&ensp;
+        <input type="text" id="emailadd" name="email" value="${model.getEmail @context='html'}"> &emsp;
+        <label>Destination :</label>&ensp;
+        <select name="destination" id="destination" data-sly-list="${model.getLocation}">
+            <option value="${item}">${item}</option>
+        </select>&emsp; &emsp;
+
+        <input type="button" value="Submit" onclick="activated()"/>
+    </form>
+
+<div id="gen">
+
+</div>
